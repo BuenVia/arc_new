@@ -5,6 +5,11 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 
+const port = process.env.PORT
+if (port === null || port === '') {
+  port = 8000
+}
+
 mongoose.connect(process.env.MONGO_DB);
 
 const app = express();
@@ -45,8 +50,8 @@ app.post("/api/ebook", apiRouter);
 app.get("/api/webinar", apiRouter);
 app.post("/api/webinar", apiRouter);
 
-app.listen(3000, (req, res) => {
-  console.log("App listening on port 3000");
+app.listen(port, (req, res) => {
+  console.log(`App listening on port ${port}`);
 });
 
 // Links to social media
