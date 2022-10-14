@@ -45,7 +45,12 @@ app.post("/api/ebook", apiRouter);
 app.get("/api/webinar", apiRouter);
 app.post("/api/webinar", apiRouter);
 
-app.listen(3000, (req, res) => {
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+
+app.listen(port, (req, res) => {
   console.log("App listening on port 3000");
 });
 
