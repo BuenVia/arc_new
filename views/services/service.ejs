@@ -7,11 +7,18 @@
   <div class="card-body">  
     <p><%= service.subTitle %></p>
     <p><%= service.content %></p>
+
+
     <% service.subContent.forEach(sub => { %>
-        <div class="mb-3">
-          <a href="/services/vda/<%= sub.title %>" class="btn btn-link"><%= sub.title %></a>
+
+        <div class="card-body">
+          <h4><%= sub.title %></h4>
+          <a href="/services/vda/<%= sub.title %>"><button class="btn btn-link">Learn more</button></a>
         </div>
+
     <% }) %>
+
+
   </div>
   <div class="card-footer">
     <a href="/services" class="btn btn-link">Back...</a>

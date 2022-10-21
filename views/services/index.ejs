@@ -1,14 +1,21 @@
 <%- include('../partials/header') %>
+<div class="card mt-3 mb-3 p-5">
+  <h1 class="title">ARC Support Services</h1>
+  <h3>Please click on a service to find out more</h3>
+</div>
 
-<h1 class="title">ARC Support Services</h1>
-<h3>Please click on a service to find out more</h3>
-
-<% vda.forEach(v => { %>
-  <div class="mb-3">
-      <a href="services/<%= v.title %>" class="btn btn-link"><%= v.title %></a>
+<div class="mb-4">
+  <div class="card">
+    <div class="service-container">
+      <% vda.forEach(v => { %>
+        <div class="card-body">
+          <h4><%= v.title %></h4>
+          <a href="services/<%= v.title %>"><button class="btn btn-link">Learn more</button></a>
+        </div>
+      <% }) %>
     </div>
-<% }) %>
-
+  </div>
+</div>
 
 <div id="vdaEl"></div>
 
