@@ -26,13 +26,13 @@ router.get("/services", (req, res) => {
   res.render("services/index", { vda: vda });
 });
 
-router.get("/services/:id", (req, res) => {
-  const serviceId = req.params.id;
+router.get("/services/:slug", (req, res) => {
+  const slug = req.params.slug;
   const vda = require("../public/js/vda");
   let service;
 
   function servFind(item) {
-    if (item.title === serviceId) {
+    if (item.slug === slug) {
       service = item;
     }
   }

@@ -1,5 +1,6 @@
 const vda = [
   {
+    slug: 'vda',
     title: "Vehicle Damage Assesor",
     subTitle: "We deliver solutions that improve your profits...",
     content:
@@ -41,6 +42,7 @@ const vda = [
     ]
   },
   {
+    slug: 'bs10125',
     title: "BS10125 - Repair Standards",
     subTitle: "",
     content:
@@ -67,6 +69,7 @@ const vda = [
     ]
   },
   {
+    slug: 'compliance',
     title: "Statutory Compliance",
     subTitle: "H&S STATUTORY COMPLIANCE",
     content:
@@ -74,6 +77,7 @@ const vda = [
     subContent: []
   },
   {
+    slug: 'development',
     title: "Business Development",
     subTitle: "",
     content:

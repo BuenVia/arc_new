@@ -55,9 +55,9 @@ td {
 }
 
 .service-container {
-  padding: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: left;
   justify-content: center;
 }
